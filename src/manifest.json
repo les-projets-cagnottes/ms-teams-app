@@ -1,0 +1,63 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "version": "1.0.0",
+    "manifestVersion": "1.11",
+    "id": "a4cc6ecb-ab3f-4f46-b4be-4996e29cfd37",
+    "packageName": "fr.lesprojetscagnottes.msteamsapp",
+    "name": {
+        "short": "Les Projets Cagnottes",
+        "full": ""
+    },
+    "developer": {
+        "name": "Les Projets Cagnottes",
+        "mpnId": "",
+        "websiteUrl": "https://les-projets-cagnottes.github.io",
+        "privacyUrl": "https://les-projets-cagnottes.github.io",
+        "termsOfUseUrl": "https://les-projets-cagnottes.github.io"
+    },
+    "description": {
+        "short": "Gestion des projets cagnottes",
+        "full": "Les Projets Cagnottes est un concept pour donner des ailes aux porteurs de projets tout en étant portés par le collectif. Les projets visent à rassembler les salariés qui n'ont pas forcément l'habitude de travailler ensemble, partagent des passions ou des convictions communes et fournissent un investissement en temps bénévole. \n\nOn peut imaginer lancer des projets d'innovation, RSE ou team building par ce biais qui, par essence, nécessite une transparence totale des activités des projets"
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "<%= botId %>",
+            "needsChannelSelector": false,
+            "isNotificationOnly": false,
+            "scopes": [
+                "team",
+                "personal"
+            ],
+            "supportsFiles": false
+        }
+    ],
+    "validDomains": [],
+    "permissions": [
+        "identity"
+    ],
+    "webApplicationInfo": {
+        "id": "<%= appId %>",
+        "resource": "https://RscBasedStoreApp",
+        "applicationPermissions": [
+            "TeamSettings.Read.Group",
+            "TeamSettings.ReadWrite.Group",
+            "ChannelSettings.Read.Group",
+            "ChannelSettings.ReadWrite.Group",
+            "Channel.Create.Group",
+            "Channel.Delete.Group",
+            "ChannelMessage.Read.Group",
+            "TeamsAppInstallation.Read.Group",
+            "TeamsAppInstallation.ReadWriteSelfForTeam.Group",
+            "TeamMember.Read.Group",
+            "TeamsActivity.Send.Group"
+        ]
+    },
+    "devicePermissions": [
+      "notifications"
+    ]
+}
