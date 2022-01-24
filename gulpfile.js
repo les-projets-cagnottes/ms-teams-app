@@ -3,6 +3,8 @@ const template = require('gulp-template');
 const zip = require('gulp-zip');
 const del = require('del');
 
+require('dotenv').config();
+
 // fetch command line arguments
 const arg = (argList => {
 
@@ -41,7 +43,7 @@ gulp.task('clean', function(done) {
 
 gulp.task('generate-manifest', function(done) {
     gulp.src(['src/static/images/**', 'src/manifest.json'])
-        .pipe(template({appId: arg.appId, botId: arg.botId}))
+        .pipe(template({appId: process.env.MICROSOFT_APP_ID, botId: process.env.MICROSOFT_APP_ID}))
         .pipe(zip('lesprojetscagnottes.zip'))
         .pipe(gulp.dest('manifest'), done);
     done();

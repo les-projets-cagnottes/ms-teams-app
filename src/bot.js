@@ -1,5 +1,5 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
+// Read botFilePath and botFileSecret from .env file.
+require('dotenv').config()
 
 const {
     TurnContext,
@@ -7,10 +7,6 @@ const {
     TeamsActivityHandler,
     teamsGetChannelId
 } = require('botbuilder');
-
-// Read botFilePath and botFileSecret from .env file.
-const ENV_FILE = path.join(__dirname, '.env');
-require('dotenv').config({ path: ENV_FILE });
 
 class TeamsStartNewThreadInChannel extends TeamsActivityHandler {
 

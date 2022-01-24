@@ -4,7 +4,6 @@
 
 - Les Projets Cagnottes - core - [Install Guide here](https://github.com/les-projets-cagnottes/core#getting-started)
 - NodeJS 12 - [Download here](https://nodejs.org)
-- A unique UUID `Bot ID` for the bot [Generate here](uuidgenerator.net/)
 
 > This App is designed for a single tenant for simplicity. Feel free to help it become multi-tenant as the author is missing a lot of information on the topic
 
@@ -29,10 +28,11 @@ Note the `Application secret` value, it will be needed later.
 Browse to the [Microsoft Bot Framework](https://dev.botframework.com/bots/new) and fill the form with the following content :
 
 - Icon : `Upload the icon of the bot`
-- Bot handle : `Value of Bot ID`
+- Bot handle : `Value of Application ID`
 - Messaging endpoint : `<ROOT URL>/api/messages`
 - App type : Single Tenant
 - App ID : `Value of Application ID`
+- Tenant ID : `Value of Tenant ID`
 
 Other fields may stay as default.
 
@@ -47,7 +47,8 @@ Clic the Microsoft Teams icon to add a corresponding channel. Let the parameters
 Checkout this repository and run the following command :
 
 ```
-gulp --appId <Application ID> --botId <Bot ID>
+export MICROSOFT_APP_ID=<Application ID>
+gulp
 ```
 
 Browse to "Manage your apps" on Teams and clic "Submit to your organization". When asked, select the file `manifest/lesprojetscagnottes.zip`.
