@@ -43,7 +43,7 @@ gulp.task('clean', function(done) {
 
 gulp.task('generate-manifest', function(done) {
     gulp.src(['src/static/images/**', 'src/manifest.json'])
-        .pipe(template({appId: process.env.MICROSOFT_APP_ID, botId: process.env.MICROSOFT_APP_ID}))
+        .pipe(template({appId: process.env.MICROSOFT_APP_ID, botId: process.env.MICROSOFT_APP_ID, botName: process.env.MICROSOFT_APP_NAME}))
         .pipe(zip('lesprojetscagnottes.zip'))
         .pipe(gulp.dest('manifest'), done);
     done();

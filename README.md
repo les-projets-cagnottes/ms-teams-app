@@ -48,6 +48,7 @@ Checkout this repository and run the following command :
 
 ```
 export MICROSOFT_APP_ID=<Application ID>
+export MICROSOFT_APP_NAME="Les Projets Cagnottes"
 gulp
 ```
 

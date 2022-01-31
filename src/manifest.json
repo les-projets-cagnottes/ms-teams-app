@@ -2,10 +2,10 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
     "version": "1.0.0",
     "manifestVersion": "1.11",
-    "id": "a4cc6ecb-ab3f-4f46-b4be-4996e29cfd37",
+    "id": "<%= botId %>",
     "packageName": "fr.lesprojetscagnottes.msteamsapp",
     "name": {
-        "short": "Les Projets Cagnottes",
+        "short": "<%= botName %>",
         "full": ""
     },
     "developer": {
