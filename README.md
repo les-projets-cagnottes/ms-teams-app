@@ -23,6 +23,11 @@ Browse to the "Certificates & secrets" page of the app and create a new secret c
 
 Note the `Application secret` value, it will be needed later.
 
+In the "Authentication" menu, add a `Web` platform with the corresponding Redirect URIs :
+
+- `<hostname>/login/ms?returnUrl=/news`
+- `<hostname>/organizations/edit/microsoft`
+
 ## Creation of the bot on the Microsoft Bot Framework
 
 Browse to the [Microsoft Bot Framework](https://dev.botframework.com/bots/new) and fill the form with the following content :
